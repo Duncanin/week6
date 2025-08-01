@@ -6,27 +6,29 @@ const { boxShadow } = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         './index.html',
-        "./src/**/*.{html,js,ts,jsx,tsx}",
+        "./src/**/*.{html,js,ts,jsx,tsx,vue}",
         './main.js',
         './pages/**/*.html',
         './layout/**/*.ejs',
         './assets/**/*.{html,js,scss}',
+        './components/**/*.{vue,js,ts,jsx,tsx}',
         // twe
         './node_modules/tw-elements/js/**/*.js',
     ],
     theme: {
         screens: {
             md: '768px',
-            lg: '992px',
+            // lg: '992px',
+            xl: '1296px', // 最大寬度
         },
         container: {
             center: true, // 置中
-            screens: {
-                // sm: '375px',
-                // md: '768px',
-                // lg: '992px',
-                xl: '1076px', // 最大寬度
-            }
+            // screens: {
+            //     // sm: '375px',
+            //     md: '768px',
+            //     lg: '992px',
+            //     xl: '1296px', // 最大寬度
+            // }
         },
         extend: {
             colors: {

@@ -25,6 +25,15 @@
 
 @layer components {
 
+    .container-1296  {
+        @apply container mx-auto max-w-[1296px] md:min-w-[768px];
+    }
+    .container-1076  {
+        @apply container mx-auto max-w-[1076px] md:min-w-[768px];
+    }
+
+
+
     .cusText-d {
         @apply font-bold text-[48px] leading-[1.2] tracking-[.02em];
         @apply md:text-[80px];
@@ -50,7 +59,7 @@
         @apply font-bold text-[18px] leading-[1.5] tracking-[.02em];
         @apply md:text-[20px];
     }
-    .cusText-b-l－ {
+    .cusText-b-lg {
         @apply font-normal text-[16px] leading-[1.5] tracking-[.02em];
         @apply md:text-[18px];
     }
@@ -93,11 +102,20 @@
         @apply md:px-5 md:gap-1;
     }
 
+    .btn-lg {
+        @apply flex items-center justify-center p-3 bg-secondary-50 rounded-btn;
+        @apply text-natural-main cusText-2xl;
+        @apply hover:bg-primary-60 active:bg-primary-60 hover:text-natural-light active:text-natural-light;
+        @apply md:px-5 md:gap-1;
+    }
+
     .iconBtn {
         @apply flex items-center justify-center p-[10px] bg-natural-light rounded-btn;
         @apply hover:bg-natural-90 active:bg-natural-90;
         @apply md:gap-1;
     }
+
+    
 }
 
 
