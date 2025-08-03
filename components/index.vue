@@ -347,7 +347,7 @@ const toggle = (i) => {
                             v-for="(qa, i) in qas" :key="i">
                             <h2 class="" :id="'qa+{{ i+1 }}'">
                                 <button
-                                    class="group relative flex w-full text-left gap-2 border-0 bg-natural-light cusText-b-lg font-bold text-natural-50"
+                                    class="flex w-full text-left gap-2 border-0 bg-natural-light cusText-b-lg font-bold text-natural-50"
                                     @click="toggle(i)">
                                     
                                     <span class="">Q.</span>
