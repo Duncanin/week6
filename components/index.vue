@@ -216,7 +216,7 @@ const toggle = (i) => {
                             :loop="true">
                         <SwiperSlide v-for="story in stories" :key="story.name" class="!w-80 md:!w-[400px] flex flex-col items-center h-full rounded-card overflow-hidden bg-natural-light shadow-boxShadow m-3">
                             
-                            <div class="relative w-full h-[400px] md:h-[500px]">
+                            <div class="w-full h-[400px] md:h-[500px]">
                                 <img :src="story.img" alt="story-pic" class="w-full h-full object-cover"/>
                                 <div class="absolute right-0 bottom-0 w-0 h-0 border-solid border-l-[40px] border-b-[40px] border-l-transparent  border-b-natural-light"></div>
                             </div>
@@ -362,14 +362,10 @@ const toggle = (i) => {
                                     </span>
                                 </button>
                             </h2>
-    
-                            <div
-                            v-show="openIndex===i"
-                            class="">
-                            <div class="cusText-b-sm border-t border-natural-85 border-dashed pt-4 mt-4 flex">
-                                    <span class="cusText-xl text-primary-60 mr-2">A.</span>
-                                    {{ qa.anser }}
-                                </div>
+
+                            <div v-show="openIndex===i" class="cusText-b-sm border-t border-natural-85 border-dashed pt-4 mt-4 flex">
+                                <span class="cusText-xl text-primary-60 mr-2">A.</span>
+                                {{ qa.anser }}
                             </div>
                         </div>
                         
