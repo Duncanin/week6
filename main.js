@@ -3,6 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { createApp } from 'vue'
 import Index from './components/index.vue'
+import Service from './components/service.vue'
 
 import { Tooltip, Tab, Dropdown, Modal, Collapse, Ripple, initTWE } from "tw-elements";
 
@@ -11,6 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
     initTWE({ Tooltip, Tab, Dropdown, Modal, Collapse, Ripple });
 });
 
-// 建立 Vue 應用並掛載到 #app
-const app = createApp(Index)
-app.mount('#app')
+// 根據 #app 上的 data-page 屬性決定要掛載哪個 Vue component
+const appElement = document.querySelector('#app')
+if (appElement) {
+    let appComponent
+
+    switch (appElement.dataset.page) {
+        case 'service':
+            appComponent = Service
+            break
+        case 'index':
+        default:
+            appComponent = Index
+    }
+
+    createApp(appComponent).mount('#app')
+}
