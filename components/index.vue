@@ -87,16 +87,19 @@ const chooseImgs =ref([
         jpg:'../assets/images/index/choose/adv-1.png',
         alt:'adv-1',
         tag:'實戰經驗',
+        hover:'我們的顧問都是親身走過這條路的專家，不是紙上談兵的理論家。你所學到的每一個建議，都是經過無數次嘗試與錯誤後萃取的精華。'
     },
     {
         jpg:'../assets/images/index/choose/adv-2.png',
         alt:'adv-2',
         tag:'全方位支持',
+        hover:'從心態調整到實際操作，從品牌建立到財務規劃，我們提供你轉型路上需要的每一塊拼圖，讓不確定感不再阻礙你的決定。'
     },
     {
         jpg:'../assets/images/index/choose/adv-3.png',
         alt:'adv-3',
         tag:'社群力量',
+        hover:'加入職旅不只是獲得諮詢，更是連結到一群志同道合的夥伴。在這裡，你的疑惑有人解答，你的成就有人分享，你的旅程不再孤單。'
     }
 ])
 
@@ -130,19 +133,19 @@ const qas = ref([
     },
     {
         question:'自由職涯真的可以養活自己嗎？你們怎麼協助？',
-        anser:'諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。',
+        anser:'自由職涯可以養活自己，但需要有策略與持續調整。WorkWay 顧問會根據你的專業、興趣、可投入時間，設計客製化的變現路徑，例如自由接案、產品化服務、遠端職位申請等，同時協助你管理初期財務風險，避免因壓力過大中途放棄。',
     },
     {
         question:'職旅 WorkWay 的收費方式是怎麼計算的？',
-        anser:'諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。',
+        anser:'我們提供單次諮詢、短期方案（例如 3 次輔導包）、或專案長期陪跑計畫。每種方案都標示清楚金額與包含內容，無強制綁約或推銷額外商品。選擇前，我們也會依照你的需求與預算一起討論最適合的安排。',
     },
     {
         question:'如果諮詢後發現不適合，會有退款保障嗎？',
-        anser:'諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。',
+        anser:'WorkWay 對每一位學員負責。如果你在第一次完整諮詢結束後，覺得方向不符合期待，可在 3 日內申請退款。我們也提供一次更換顧問的機會，確保你找到最適合自己的陪伴者。',
     },
     {
         question:'我現在還不確定自己要什麼，也可以預約諮詢嗎？',
-        anser:'諮詢通常採 Google Meet 或 Zoom，時長約 30 分鐘。我們建議你在預約前先簡單整理目前的狀態、遇到的困難、或想達成的目標。如果你不確定，顧問也會從對話中引導你探索，無需擔心準備不夠。',
+        anser:'很多人來找 WorkWay 時，其實也處於迷惘期。我們的一對一諮詢設計，就是從理解你的人生目標、價值觀與現實條件開始，逐步協助你釐清想要的生活方式與可能路徑。你不需要有答案，只需要願意開始對話。',
     },
 ])
 const openIndex = ref(0)
@@ -214,10 +217,10 @@ const toggle = (i) => {
                             :space-between="0"
                             :speed="3000"
                             :loop="true">
-                        <SwiperSlide v-for="story in stories" :key="story.name" class="!w-80 md:!w-[400px] flex flex-col items-center h-full rounded-card overflow-hidden bg-natural-light shadow-boxShadow m-3">
+                        <SwiperSlide v-for="story in stories" :key="story.name" class="!w-80 md:!w-[400px] flex flex-col items-center h-full rounded-card overflow-hidden bg-natural-light shadow-boxShadow m-3 group">
                             
-                            <div class="w-full h-[400px] md:h-[500px]">
-                                <img :src="story.img" alt="story-pic" class="w-full h-full object-cover"/>
+                            <div class="w-full h-[400px] md:h-[500px] overflow-hidden relative">
+                                <img :src="story.img" alt="story-pic" class="w-full h-full object-cover group-hover:scale-[120%] transition-transform duration-500"/>
                                 <div class="absolute right-0 bottom-0 w-0 h-0 border-solid border-l-[40px] border-b-[40px] border-l-transparent  border-b-natural-light"></div>
                             </div>
 
@@ -254,17 +257,26 @@ const toggle = (i) => {
                 </div>
 
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 min-[1140px]:grid-cols-3">
-                    <picture v-for="(img, i) in chooseImgs" :key="i" class="relative inline-block col-span-1">
-                        <img :src="img.jpg" :alt="img.alt" class="object-cover h-[316px] w-full block rounded-card overflow-hidden">
+                    <picture v-for="(img, i) in chooseImgs" :key="i" class="relative inline-block col-span-1 group overflow-hidden">
+                        <img :src="img.jpg" :alt="img.alt" class="object-cover h-[316px] w-full block rounded-card rounded-bl-none group-hover:scale-[120%] transition-transform duration-700">
+
+                        <!-- mask hover -->
+                        <div class="absolute inset-0 bg-natural-main bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-natural-light cusText-b-md transition-opacity duration-300 px-6 text-center rounded-card">
+                            {{ img.hover }}
+                        </div>
                         <!-- tag -->
                         <div class="absolute bottom-0 left-0 bg-natural-95 text-sm px-6 py-3 rounded-tr-xl flex gap-2 items-center text-primary-60">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="none"><path fill="currentColor" d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="none">
+                                <path fill="currentColor" d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"/>
                             </svg>
                             <span class="cusText-2xl text-natural-50">{{ img.tag }}</span>
                         </div>
                     </picture>
                 </div>
-                <p class="cusText-b-md text-natural-50">不是套模板的建議，而是為你量身打造的陪伴！</p>
+                <p class="cusText-b-md text-natural-50 flex items-center flex-nowrap text-nowrap">
+                    不是套模板的建議，而是為你量身打造的陪伴！
+                    <span class="bg-natural-85 h-[1px] w-full"></span>
+                </p>
 
             </div>
         </div>
@@ -274,11 +286,11 @@ const toggle = (i) => {
 
     <section class="bg-natural-light">
         <div class="container-1296">
-            <section class="relative overflow-hidden grid grid-cols-1 md:grid-cols-2 space-y-4 md:space-y-6 py-12 md:py-20 px-3 md:px-0
+            <section class="relative overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-6 py-12 md:py-20 px-3 md:px-0
             bg-[url(/assets/images/index/choose/gradient-ball.png)] bg-[length:400px_400px] md:bg-[length:800px_800px] bg-no-repeat bg-[position:135px_530px] md:bg-[position:calc(100%+300px)_calc(100%+300px)]">
 
-                <div class="h-[280px] md:h-[480px] col-span-1">
-                    <img src="/assets/images/index/choose/team.png" alt="bg-img" class="w-full h-full block object-cover rounded-card">
+                <div class="h-[280px] md:h-[480px] col-span-1 group">
+                    <img src="/assets/images/index/choose/team.png" alt="bg-img" class="w-full h-full block object-cover rounded-card group-hover:scale-105 transition-transform duration-[2s]">
                 </div>
 
                 <div class="cusText-b-lg text-natural-50 flex flex-col gap-6 md:px-3 col-span-1">
@@ -307,10 +319,10 @@ const toggle = (i) => {
                 </div>
 
                 <div class="flex gap-4 md:gap-6 overflow-x-scroll auto-cols-[306px]">
-                    <div v-for="(serve, index) in serves" :key="index" class="bg-natural-light rounded-card shadow-boxShadow pt-16 pb-12 px-6 flex flex-col items-center text-center gap-4 md:gap-6 relative w-[306px] h-[370px] md:h-[390px] flex-none">
+                    <div v-for="(serve, index) in serves" :key="index" class="bg-natural-light rounded-card shadow-boxShadow pt-16 pb-12 px-6 flex flex-col items-center text-center gap-4 md:gap-6 relative w-[306px] h-[370px] md:h-[390px] flex-none group">
                         <div class="bg-natural-95 text-primary-60 cusText-b-sm py-2 px-4 absolute top-0 left-0 rounded-tl-xl rounded-br-xl">STEP
                             <span class="text-primary-60 cusText-b-lg">{{ index+1 }}</span></div>
-                        <img :src="serve.img" :alt="serve.title" class="w-40 h-40 block">
+                        <img :src="serve.img" :alt="serve.title" class="w-40 h-40 block group-hover:scale-125 transition-transform duration-300">
                         <h3 class="text-xl font-bold mb-2">{{ serve.title }}</h3>
                         <p class="cusText-b-sm text-natural-50">{{ serve.desc }}</p>
                     </div>
@@ -322,7 +334,7 @@ const toggle = (i) => {
     </section>
 
 
-    <section class="bg-[url(/assets/images/index/bg-grid.png)] bg-repeat ">
+    <section class="bg-[url(/assets/images/index/bg-grid.png)] bg-repeat">
         <div class="container-1296">
             
             <div class="flex flex-col py-12 md:py-20 gap-6 md:gap-12 px-3 md:-x-0">
@@ -380,7 +392,7 @@ const toggle = (i) => {
 
     <section>
         <div class="container-1296">
-            <div class="bg-primary-60 text-natural-light py-4 px-6 md:py-6 md:px-12 rounded-card">
+            <div class="bg-primary-60 text-natural-light py-4 px-6 md:py-6 md:px-12 rounded-card mx-3">
 
                 <div class="mb-6">
                     <svg width="40" height="36" viewBox="0 0 96 84" fill="none" xmlns="http://www.w3.org/2000/svg">
