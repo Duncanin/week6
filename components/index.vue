@@ -6,19 +6,19 @@ import 'swiper/css'
 const h1Value = ref('一起陪伴、探索<br>還有你那些未完成的夢')
 const heroImgs = ref([
     {
-        jpg:'../assets/images/index/hero-1.png',
+        jpg: new URL('/assets/images/index/hero-1.png', import.meta.url).href,
         alt:'hero-1'
     },
     {
-        jpg:'../assets/images/index/hero-2.png',
+        jpg: new URL('/assets/images/index/hero-2.png', import.meta.url).href,
         alt:'hero-2'
     },
     {
-        jpg:'../assets/images/index/hero-3.png',
+        jpg: new URL('/assets/images/index/hero-3.png', import.meta.url).href,
         alt:'hero-3'
     },
     {
-        jpg:'../assets/images/index/hero-4.png',
+        jpg: new URL('/assets/images/index/hero-4.png', import.meta.url).href,
         alt:'hero-4'
     },
 ])
@@ -27,7 +27,7 @@ heroImgs.value.reverse()
 
 const stories = ref([
     {
-        img: '../assets/images/index/story/story-cover-1.png',
+        img: new URL('/assets/images/index/story/story-cover-1.png', import.meta.url).href,
         title: '轉型成功的設計師',
         jobTitle: '視覺設計師',
         name: '郭敏迪',
@@ -36,7 +36,7 @@ const stories = ref([
         desc: '從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。'
     },
     {
-        img: '../assets/images/index/story/story-cover-2.png',
+        img: new URL('/assets/images/index/story/story-cover-2.png', import.meta.url).href,
         title: '數位遊牧生活實踐者',
         jobTitle: '內容策略師',
         name: '林雨潔',
@@ -45,7 +45,7 @@ const stories = ref([
         desc: '兩年前我只想環遊世界，卻不知道怎麼開始。職旅給了我遠端工作與生活規劃的指導。現在我在五個國家工作過，收入比以前多 20%。每次打開電腦，看見窗外不同的風景，都慶幸當初那一個決定。'
     },
     {
-        img: '../assets/images/index/story/story-cover-3.png',
+        img: new URL('/assets/images/index/story/story-cover-3.png', import.meta.url).href,
         title: '中年轉型的工程師',
         jobTitle: '系統架構顧問',
         name: '張世明',
@@ -54,7 +54,7 @@ const stories = ref([
         desc: '59 歲被裁員時，我以為職涯結束了。職旅顧問不只幫我轉職，更讓我相信自己還有價值。現在我每月穩定接案、收入翻倍。年齡不是限制，只是我還沒找到對的方向。'
     },
     {
-        img: '../assets/images/index/story/story-cover-1.png',
+        img: new URL('/assets/images/index/story/story-cover-1.png', import.meta.url).href,
         title: '轉型成功的設計師',
         jobTitle: '視覺設計師',
         name: '郭敏迪',
@@ -63,7 +63,7 @@ const stories = ref([
         desc: '從企業設計師轉職自由接案，比我想的難太多。收入不穩時我幾乎想放棄，是職旅顧問幫我找回方向與差異化。半年後，我不僅維持收入，還能自由挑案，最重要的是，我終於有時間陪爸媽。'
     },
     {
-        img: '../assets/images/index/story/story-cover-2.png',
+        img: new URL('/assets/images/index/story/story-cover-2.png', import.meta.url).href,
         title: '數位遊牧生活實踐者',
         jobTitle: '內容策略師',
         name: '林雨潔',
@@ -72,7 +72,7 @@ const stories = ref([
         desc: '兩年前我只想環遊世界，卻不知道怎麼開始。職旅給了我遠端工作與生活規劃的指導。現在我在五個國家工作過，收入比以前多 20%。每次打開電腦，看見窗外不同的風景，都慶幸當初那一個決定。'
     },
     {
-        img: '../assets/images/index/story/story-cover-3.png',
+        img: new URL('/assets/images/index/story/story-cover-3.png', import.meta.url).href,
         title: '中年轉型的工程師',
         jobTitle: '系統架構顧問',
         name: '張世明',
@@ -84,19 +84,19 @@ const stories = ref([
 
 const chooseImgs =ref([
     {
-        jpg:'../assets/images/index/choose/adv-1.png',
+        jpg: new URL('/assets/images/index/choose/adv-1.png', import.meta.url).href,
         alt:'adv-1',
         tag:'實戰經驗',
         hover:'我們的顧問都是親身走過這條路的專家，不是紙上談兵的理論家。你所學到的每一個建議，都是經過無數次嘗試與錯誤後萃取的精華。'
     },
     {
-        jpg:'../assets/images/index/choose/adv-2.png',
+        jpg: new URL('/assets/images/index/choose/adv-2.png', import.meta.url).href,
         alt:'adv-2',
         tag:'全方位支持',
         hover:'從心態調整到實際操作，從品牌建立到財務規劃，我們提供你轉型路上需要的每一塊拼圖，讓不確定感不再阻礙你的決定。'
     },
     {
-        jpg:'../assets/images/index/choose/adv-3.png',
+        jpg: new URL('/assets/images/index/choose/adv-3.png', import.meta.url).href,
         alt:'adv-3',
         tag:'社群力量',
         hover:'加入職旅不只是獲得諮詢，更是連結到一群志同道合的夥伴。在這裡，你的疑惑有人解答，你的成就有人分享，你的旅程不再孤單。'
@@ -105,22 +105,22 @@ const chooseImgs =ref([
 
 const serves = ref([
     {
-        img: '../assets/images/index/serve-1.svg',
+        img: new URL('/assets/images/index/serve-1.svg', import.meta.url).href,
         title: '免費註冊會員',
         desc: '透過網站左上角按鈕，立即註冊免費會員，與我們開始建立連結。',
     },
     {
-        img: '../assets/images/index/serve-2.svg',
+        img: new URL('/assets/images/index/serve-2.svg', import.meta.url).href,
         title: '填寫職旅計劃',
         desc: '了解你的技能、熱情與市場需求的交會點，找出屬於你的獨特定位。',
     },
     {
-        img: '../assets/images/index/serve-3.svg',
+        img: new URL('/assets/images/index/serve-3.svg', import.meta.url).href,
         title: '初次諮詢',
         desc: '依據你的目標與現況，給予最直接的建議，建立清晰的轉型思路。',
     },
     {
-        img: '../assets/images/index/serve-4.svg',
+        img: new URL('/assets/images/index/serve-4.svg', import.meta.url).href,
         title: '實戰指導',
         desc: '專家一對一指導，從品牌建立到客戶開發，每一步都有明確方向。',
     },
@@ -215,9 +215,8 @@ const toggle = (i) => {
                 <div class="col-span-2">
                     <Swiper :slides-per-view="'auto'"
                             :space-between="0"
-                            :speed="3000"
-                            :loop="true">
-                        <SwiperSlide v-for="story in stories" :key="story.name" class="!w-80 md:!w-[400px] flex flex-col items-center h-full rounded-card overflow-hidden bg-natural-light shadow-boxShadow m-3 group">
+                            css-mode="true">
+                        <SwiperSlide v-for="story in stories" :key="story.name" class="!w-80 md:!w-[400px] flex flex-col items-center h-full rounded-card overflow-hidden bg-natural-light shadow-boxShadow group m-3">
                             
                             <div class="w-full h-[400px] md:h-[500px] overflow-hidden relative">
                                 <img :src="story.img" alt="story-pic" class="w-full h-full object-cover group-hover:scale-[120%] transition-transform duration-500"/>
