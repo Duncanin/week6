@@ -391,7 +391,7 @@ const toggle = (i) => {
 
     <section>
         <div class="container-1296">
-            <div class="bg-primary-60 text-natural-light py-4 px-6 md:py-6 md:px-12 rounded-card mx-3">
+            <div class="bg-primary-60 text-natural-light py-4 px-6 md:py-6 md:px-12 rounded-card mx-3 my-10">
 
                 <div class="mb-6">
                     <svg width="40" height="36" viewBox="0 0 96 84" fill="none" xmlns="http://www.w3.org/2000/svg">
