@@ -203,7 +203,11 @@ const toggle = (i) => {
         <div class="container-1296">
             <section class="px-3 md:px-0 md:grid grid-cols-3 gap-6 py-12 md:py-20">
                 <div class="col-span-1 my-auto">
-                    <img src="/assets/images/index/logo.svg" alt="">
+                    <svg width="96" height="84" viewBox="0 0 96 84" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-[42px] md:w-24 md:h-[84px]">
+                        <path d="M74.1289 8.19873C86.2078 8.19873 95.9999 17.9987 96 30.0874V54.3354L95.998 54.6372C95.9179 60.5522 93.491 65.9028 89.6133 69.7935V82.0005H87.0967C86.119 82.0004 85.0865 81.7192 84.167 81.3843C83.2024 81.0329 82.1563 80.5447 81.0918 79.9751C79.2139 78.9701 77.1625 77.6479 75.2236 76.1958C74.9491 76.2095 74.673 76.2188 74.3955 76.2222L74.1289 76.2241H60C54.8961 76.224 50.2015 74.4724 46.4805 71.5396C47.9663 70.501 49.2118 69.2988 50.2256 68.0571C52.9816 70.027 56.3552 71.1869 60 71.187H74.1289L74.334 71.186C74.8114 71.1802 75.2852 71.1547 75.7539 71.1099L76.75 71.0142L77.5391 71.6294C79.5009 73.1588 81.6153 74.5444 83.4639 75.5337C83.8555 75.7433 84.2296 75.931 84.5811 76.0972V67.5962L85.4102 66.8462C86.805 65.5854 87.9865 64.0952 88.8975 62.436H66V57.2056H90.7246C90.8718 56.3468 90.9547 55.4659 90.9668 54.5679L90.9678 54.3354V50.4263H71.8066V45.1968H90.9678V38.4165H77.0332V33.187H90.9678V30.0874C90.9677 20.7802 83.4286 13.2349 74.1289 13.2349H60C59.8871 13.2349 59.7745 13.2366 59.6621 13.2388C59.1363 11.5115 58.4152 9.86947 57.5244 8.33838C58.337 8.24675 59.163 8.19875 60 8.19873H74.1289Z" fill="#000000"/>
+                        <path d="M36.5801 2.00024C46.2723 2.00024 54.3644 8.85613 56.2793 17.9866C59.0886 27.4208 62.3061 44.2402 62.3223 44.3245H52.4512V49.5549H43.1611C43.1612 52.751 46.3763 57.1389 50.6143 57.1389C50.6143 60.6256 45.7158 69.6026 35.0322 69.6028H20.1289C9.01212 69.6028 0.000168115 60.5841 0 49.4583V22.1458C0 11.0198 9.01202 2.00024 20.1289 2.00024H36.5801ZM42.9668 24.47C40.8291 24.4702 39.0967 26.2045 39.0967 28.344C39.0967 30.4835 40.8291 32.2178 42.9668 32.218C45.1047 32.218 46.8379 30.4836 46.8379 28.344C46.8378 26.2044 45.1046 24.47 42.9668 24.47Z" fill="#4A69E8"/>
+                    </svg>
+
                     <h2 class="cusText-5xl py-4 md:py06">他們已經踏上職旅
                         <br>
                         聽聽他們的故事
@@ -354,27 +358,24 @@ const toggle = (i) => {
                     
                         
                     <div class="col-span-12 md:-col-end-1 md:col-span-7 space-y-4 md:space-y-6">
-                        <div class="rounded-radius-12 border border-natural-85 bg-natural-light shadow-boxShadow overflow-hidden p-6"
+                        <div class="rounded-radius-12 border border-natural-85 bg-natural-light shadow-boxShadow overflow-hidden hover:shadow-lg hover:bg-natural-95"
                             v-for="(qa, i) in qas" :key="i">
-                            <h2 class="" :id="'qa+{{ i+1 }}'">
-                                <button
-                                    class="flex w-full text-left gap-2 border-0 bg-natural-light cusText-b-lg font-bold text-natural-50"
-                                    @click="toggle(i)">
-                                    
-                                    <span class="">Q.</span>
-                                    {{ qa.question }}
-    
-                                    <span
-                                    class="ms-auto [&>svg]:h-6 [&>svg]:w-6">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="none"
-                                        :class="[openIndex === i ? '-rotate-90 transition-transform duration-300 text-primary-60' : 'transition-transform duration-300']">
-                                            <path fill="currentColor" d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </h2>
+                            <button :id="'qa+{{ i+1 }}'" class="flex w-full text-left gap-2 border-0 cusText-b-lg font-bold text-natural-50 p-6 pb-4"
+                                @click="toggle(i)">
+                                
+                                <span class="">Q.</span>
+                                {{ qa.question }}
 
-                            <div v-show="openIndex===i" class="cusText-b-sm border-t border-natural-85 border-dashed pt-4 mt-4 flex">
+                                <span
+                                class="ms-auto [&>svg]:h-6 [&>svg]:w-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="none"
+                                    :class="[openIndex === i ? '-rotate-90 transition-transform duration-300 text-primary-60' : 'transition-transform duration-300']">
+                                        <path fill="currentColor" d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div v-show="openIndex===i" class="cusText-b-sm border-t border-natural-85 border-dashed flex p-6 pt-4">
                                 <span class="cusText-xl text-primary-60 mr-2">A.</span>
                                 {{ qa.anser }}
                             </div>

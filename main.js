@@ -4,6 +4,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { createApp } from 'vue'
 import Index from './components/index.vue'
 import Service from './components/service.vue'
+import About from './components/about.vue'
+import Contact from './components/contact.vue'
 
 import { Tooltip, Tab, Dropdown, Modal, Collapse, Ripple, initTWE } from "tw-elements";
 
@@ -20,6 +22,12 @@ if (appElement) {
     switch (appElement.dataset.page) {
         case 'service':
             appComponent = Service
+            break
+        case 'about':
+            appComponent = About
+            break
+        case 'contact':
+            appComponent = Contact
             break
         case 'index':
         default:

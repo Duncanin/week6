@@ -77,19 +77,36 @@ const consults = ref([
         pic: new URL('../assets/images/service/server-3.svg', import.meta.url).href
     },
 ])
+import { onMounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+
+onMounted(() => {
+    AOS.init({
+        duration: 800,   // 動畫持續時間
+        once: false,     // 每次滾動進入都觸發，而不是只觸發一次
+    })
+})
 </script>
 <template>
+
+    
     <section class="bg-[url(/assets/images/service/banner-bg.png)] bg-repeat bg-[length:200px] relative">
+
         <div class="container-1296 max-w-[800px]">
             <div class="hidden min-[1024px]:contents">
+                
                 <img src="/assets/images/service/banner-person.svg" alt="bg-img" class="absolute -bottom-2 right-0">
                 <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0">
                 <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0">
             </div>
+    
+    
             <div class="space-y-6 md:space-y-12 py-12 md:py-20 px-3 md:px-0 text-center">
                 <h1 class="cusText-5xl">服務方案</h1>
-                <p class="cusTextb-lg text-natural-50 relative z-10">我們最全面的服務方案，為您提供從評估、規劃到實踐的完整支持。不再擔心轉型過程中的各種挑戰，我們的專家團隊將全程陪伴，確保您順利實現職業自由。</p>
-
+                <p class="cusText-b-lg text-natural-50 relative z-10">我們最全面的服務方案，為您提供從評估、規劃到實踐的完整支持。不再擔心轉型過程中的各種挑戰，我們的專家團隊將全程陪伴，確保您順利實現職業自由。</p>
+    
             </div>
 
         </div>
@@ -110,7 +127,7 @@ const consults = ref([
                     <div v-if="plan.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold">
                         HOT
                     </div>
-                    <div class="md:grid md:grid-cols-4 gap-6">
+                    <div class="md:grid md:grid-cols-4 gap-6 group">
                         <div class="space-y-4 md:space-y-6 md:col-span-2 min-[1140px]:col-span-3">
                             <div class="space-y-2">
                                 <!-- 方案標題 -->
@@ -154,7 +171,7 @@ const consults = ref([
         
                         </div>
                         <div class="hidden md:block md:col-span-2 min-[1140px]:col-span-1 min-w-spac-300">
-                            <img :src="plan.pic" alt="pic" class="w-full h-auto object-cover">
+                            <img :src="plan.pic" alt="pic" class="w-full h-auto object-cover group-hover:scale-125 transition-transform duration-500 group-hover:translate-y-1/2">
                         </div>
 
                     </div>
@@ -180,9 +197,9 @@ const consults = ref([
                         <div v-if="consult.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold">
                             HOT
                         </div>
-                        <div class="flex flex-col items-center text-center gap-4 md:gap-6">
+                        <div class="flex flex-col items-center text-center gap-4 md:gap-6 group">
                             <div class="w-[120px] md:w-40">
-                                <img :src="consult.pic" alt="pic" class="w-full h-auto object-cover">
+                                <img :src="consult.pic" alt="pic" class="w-full h-auto object-cover group-hover:scale-125 transition-transform duration-700">
                             </div>
                             <div class="space-y-2">
                                 <h4 class="cusText-2xl">{{ consult.title }}</h4>
@@ -213,7 +230,7 @@ const consults = ref([
 
     <section class="bg-[linear-gradient(to_bottom,_theme(colors.natural.95)_200px,_theme(colors.natural.light)_200px)]">
         <div class="container-1296">
-            <section class="py-12 p-3 md:py-20 md:px-0">
+            <section class="py-12 p-3 md:py-20 md:px-0 sapce-y-6 md:space-y-12">
                 <div class="flex flex-col items-center gap-4">
                     <h3 class="cusText-4xl">
                         <img src="../assets/images/service/love.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1">
@@ -222,7 +239,7 @@ const consults = ref([
                 </div>
                 
                 
-                <section class="bg-[url('/assets/images/service/subscribe-3.svg')] bg-secondary-90 bg-[length:175%] bg-no-repeat h-[265px] bg-[position:100%_0%] md:h-[326px] border-2 border-secondary-50 shadow-boxShadow rounded-card p-6 md:p-12 flex flex-col gap-12 items-center text-center max-w-[856px] mx-auto md:bg-[length:70%]">
+                <section class="bg-[url('/assets/images/service/subscribe-3.svg')] bg-secondary-90 bg-[length:175%] bg-no-repeat h-[265px] bg-[position:100%_0%] md:h-[326px] border-2 border-secondary-50 shadow-boxShadow rounded-card p-6 md:p-12 flex flex-col gap-12 items-center text-center max-w-[856px] mx-auto md:bg-[length:70%] relative">
                     <div>
                         <h4 class="cusText-2xl mb-2">職旅會員計畫</h4>
                         <p class="cusText-b-md">享有長期社群支持與資源服務</p>
@@ -243,6 +260,11 @@ const consults = ref([
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
                         </span>
                     </button>
+
+                    <div>
+                        <img src="../assets/images/service/subscribe-1.svg" alt="bg-1" class="absolute -bottom-[2px] left-6" data-aos="fade-right">
+                        <img src="../assets/images/service/subscribe-2.svg" alt="bg-2" class="absolute -bottom-[2px] right-6" data-aos="fade-left">
+                    </div>
 
                 </section>
 
