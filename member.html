@@ -11,8 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
     rel="stylesheet">
-  <script type="module" crossorigin src="/week6/assets/main-BmkilUwd.js"></script>
-  <link rel="stylesheet" crossorigin href="/week6/assets/main-Cuf8L4aO.css">
+  <script type="module" crossorigin src="/week6/assets/main-CQkILEeM.js"></script>
+  <link rel="stylesheet" crossorigin href="/week6/assets/main-DpiMU2rR.css">
 </head>
 
 <body>
@@ -33,23 +33,6 @@
                         <img src="/week6/assets/logo-header-CofVtVVn.svg" alt="logo" class="w-full h-auto block">
                     </a>
                 </div>
-
-                <!-- nav in md:
-                <ul class="hidden md:flex md:items-center md:justify-center gap-3">
-                    <li class="">
-                        <a class="cusText-b-md py-2 px-6 rounded-btn hover:bg-natural-90 active:bg-natural-90"
-                        href="#">服務方案</a
-                        >
-                    </li>
-                    <li class="">
-                        <a class="cusText-b-md py-2 px-6 rounded-btn hover:bg-natural-90 active:bg-natural-90"
-                        href="#">關於職旅</a>
-                    </li>
-                    <li class="">
-                        <a class="cusText-b-md py-2 px-6 rounded-btn hover:bg-natural-90 active:bg-natural-90"
-                        href="#">聯絡我們</a>
-                    </li>
-                </ul> -->
 
                 <!-- TWE way -->
                 <!-- <ul id="navbarSupportedContentY"
@@ -107,12 +90,12 @@
                 <div class="col-end-[-1] justify-self-end flex items-center justify-center gap-3">
 
 
-                    <div class="hidden items-center justify-center userInfo" id="userInfo">
+                    <!-- <div class="hidden items-center justify-center userInfo" id="userInfo">
                         <picture class="w-11 h-11 mr-2">
-                            <img src="/week6/assets/user_pic-qsdzM2IO.png" alt="user-pic" class="w-full h-full block rounded-radius-1000 border object-cover border-natural-85 userImg" id="userImg">
+                            <img src="/assets/images/plan/user_pic.png" alt="user-pic" class="w-full h-full block rounded-radius-1000 border object-cover border-natural-85 userImg" id="userImg">
                         </picture>
                         <h3 class="cusText-b-md">Mokumaru</h3>
-                    </div>
+                    </div> -->
                     <!-- Button trigger modal -->
                     <button class="btn-outline cusText-b-md py-2 px-4 md:px-6 text-nowrap loginBtn"
                             type="submit"
@@ -127,6 +110,7 @@
 
                     <!-- login Modal -->
                     <div data-twe-modal-init
+                        style="display: none"
                         class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
                         id="exampleModalFirst"
                         tabindex="-1"
@@ -210,11 +194,12 @@
 
                     <!-- register Modal -->
                     <div data-twe-modal-init
-                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-                    id="exampleModalSecond"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalSecondLabel"
-                    aria-hidden="true">
+                        style="display: none"
+                        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                        id="exampleModalSecond"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalSecondLabel"
+                        aria-hidden="true">
                         <div data-twe-modal-dialog-ref
                             class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7">
 
@@ -284,15 +269,15 @@
 
                                     <div class="flex gap-1 me-auto my-4">
                                         <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="checkbox" class="peer appearance-none w-5 h-5 rounded-sm border border-natural-85 bg-natural-light hover:border-primary-60 hover:bg-primary-60 active:border-primary-60 active:bg-primary-60 disabled:bg-natural-75 disabled:border-natural-75 [&.error]:bg-danger-90 [&.error]:border-danger-45 checked:bg-primary-60 checked:border-primary-60 cursor-pointer" />
+                                            <input type="checkbox" class="peer appearance-none w-5 h-5 rounded-[4px] border border-natural-85 bg-natural-light hover:border-primary-60 hover:bg-primary-60 active:border-primary-60 active:bg-primary-60 disabled:bg-natural-75 disabled:border-natural-75 [&.error]:bg-danger-90 [&.error]:border-danger-45 checked:bg-primary-60 checked:border-primary-60 cursor-pointer" />
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16" class="hidden peer-hover:block peer-active:block peer-checked:block absolute pointer-events-none text-natural-light" >
                                                     <path fill="currentColor" d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
                                                 </svg>
                                         </label>
                                             我同意
-                                            <a href="" class="cusText-b-sm border-b border-primary-60 text-primary-60">服務條款</a>
+                                            <a href="../pages/userAgreement.html" class="cusText-b-sm border-b border-primary-60 text-primary-60">服務條款</a>
                                             和
-                                            <a href="" class="cusText-b-sm border-b border-primary-60 text-primary-60">隱私政策</a>
+                                            <a href="../pages/privacyPolicy.html" class="cusText-b-sm border-b border-primary-60 text-primary-60">隱私政策</a>
                                     </div>
                                     
                                     <button class="btn-filled w-full cusText-b-md mb-6 min-[1024px]:mb-12">
@@ -976,7 +961,7 @@
 
 
               <!-- career status -->
-              <section class="md:flex">
+              <section class="md:flex border-b border-natural-85">
 
                 <h2 class="cusText-2xl text-natural-10 font-medium
                             flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">職旅計劃概況
@@ -987,7 +972,7 @@
                 </h2>
   
                   
-                <div class="md:flex flex-col border-b border-natural-85 pb-6 md:pb-12 space-y-4 md:space-y-6">
+                <div class="md:flex flex-col pb-6 md:pb-12 space-y-4 md:space-y-6">
 
                   <!-- career status radio -->
                   <div class="space-y-spac-8 space-x-spac-8">
@@ -1397,7 +1382,7 @@
               </section>
 
               <!-- career plan -->
-              <section class="md:flex">
+              <section class="md:flex border-b border-natural-85">
                 <h2 class="cusText-2xl text-natural-10 font-medium
                             flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">職涯規劃
                   <sapn class="cusText-b-md text-natural-50">欄位皆為
@@ -1406,7 +1391,7 @@
                   </sapn>
                 </h2>
                   
-                <div class="md:flex flex-col border-b border-natural-85 pb-6 md:pb-12 space-y-4 md:space-y-6">
+                <div class="md:flex flex-col pb-6 md:pb-12 space-y-4 md:space-y-6">
 
                   <!-- 1 year career plan -->
                   <div class="relative">
@@ -1714,7 +1699,7 @@
               </section>
 
               <!-- professional skills -->
-              <section class="md:flex">
+              <section class="md:flex border-b border-natural-85">
                 <h2 class="cusText-2xl text-natural-10 font-medium
                             flex items-center justify-between md:flex-col md:items-start min-w-spac-300 md:justify-start md:gap-3 mb-4">專業技能區塊
                   <sapn class="cusText-b-md text-natural-50">欄位皆為選填
@@ -1724,7 +1709,7 @@
                 </h2>
   
                   
-                <div class="md:flex flex-col border-b border-natural-85 pb-6 md:pb-12 space-y-4 md:space-y-6">
+                <div class="md:flex flex-col pb-6 md:pb-12 space-y-4 md:space-y-6">
 
                   <!-- core professional field -->
                   <div class="space-y-spac-8">
