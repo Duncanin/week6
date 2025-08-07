@@ -2,37 +2,50 @@ import './assets/scss/all.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { createApp } from 'vue'
+import Header from './layout/header.vue'
+import Footer from './layout/footer.vue'
 import Index from './components/index.vue'
 import Service from './components/service.vue'
 import About from './components/about.vue'
 import Contact from './components/contact.vue'
 
+// TWE
 import { Tooltip, Tab, Dropdown, Modal, Collapse, Ripple, initTWE } from "tw-elements";
 
 // 確保 DOM 載入完成後才初始化
 document.addEventListener("DOMContentLoaded", () => {
     initTWE({ Tooltip, Tab, Dropdown, Modal, Collapse, Ripple });
-});
 
-// 根據 #app 上的 data-page 屬性決定要掛載哪個 Vue component
-const appElement = document.querySelector('#app')
-if (appElement) {
-    let appComponent
+    // 自動掛載所有 data-page 的 Vue 元件
+    const mountPoints = document.querySelectorAll('[data-page]')
 
-    switch (appElement.dataset.page) {
+    mountPoints.forEach(el => {
+        const page = el.dataset.page
+        let component = null
+
+        switch (page) {
+        case 'header':
+            component = Header
+            break
+        case 'footer':
+            component = Footer
+            break
         case 'service':
-            appComponent = Service
+            component = Service
             break
         case 'about':
-            appComponent = About
+            component = About
             break
         case 'contact':
-            appComponent = Contact
+            component = Contact
             break
         case 'index':
         default:
-            appComponent = Index
-    }
+            component = Index
+        }
 
-    createApp(appComponent).mount('#app')
-}
+        if (component) {
+        createApp(component).mount(el)
+        }
+    })
+})

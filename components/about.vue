@@ -1,4 +1,8 @@
 <script setup>
+import Header from '../layout/header.vue'
+import Reserve from '../layout/reserve.vue'
+import Footer from '../layout/footer.vue'
+
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
@@ -57,6 +61,7 @@ const comInfo = ref(
 
 
 <template>
+    <Header />
     <section class="bg-[url(/assets/images/service/banner-bg.png)] bg-repeat bg-[length:200px] relative">
 
         <div class="container-1296 max-w-[800px]">
@@ -160,4 +165,6 @@ const comInfo = ref(
     </section>
 
 
+    <Reserve />
+    <Footer />
 </template>

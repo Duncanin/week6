@@ -1,4 +1,7 @@
 <script setup>
+import Header from '../layout/header.vue'
+import Footer from '../layout/footer.vue'
+
 import { ref } from 'vue'
 
 const consultTitle = ref([
@@ -28,7 +31,9 @@ const infoSource = ref ([
 </script>
 
 <template>
+    <Header />
 
+    
     <main class="bg-natural-95">
         <div class="container max-w-5xl px-3">
             <section class="py-12 md:py-20 space-y-6 md:space-y-12">
@@ -541,5 +546,5 @@ const infoSource = ref ([
         </div>
     </main>
 
-
+    <Footer />
 </template>

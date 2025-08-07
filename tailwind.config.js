@@ -9,7 +9,7 @@ module.exports = {
         "./src/**/*.{html,js,ts,jsx,tsx,vue}",
         './main.js',
         './pages/**/*.html',
-        './layout/**/*.ejs',
+        './layout/**/*.{ejs,vue}',
         './assets/**/*.{html,js,scss}',
         './components/**/*.{vue,js,ts,jsx,tsx}',
         // twe
@@ -18,7 +18,7 @@ module.exports = {
     theme: {
         screens: {
             md: '768px',
-            // lg: '992px',
+            // lg: '1024px',
             xl: '1296px', // 最大寬度
         },
         container: {
@@ -31,6 +31,9 @@ module.exports = {
             // }
         },
         extend: {
+            screens: {
+                lg: '1024px',
+            },
             colors: {
                 primary: {
                     main: '#4A69E8',

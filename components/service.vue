@@ -1,4 +1,6 @@
 <script setup>
+import Footer from '../layout/footer.vue'
+import Header from '../layout/header.vue'
 import { ref } from 'vue'
 
 const plans = ref([
@@ -90,7 +92,7 @@ onMounted(() => {
 })
 </script>
 <template>
-
+    <Header />
     
     <section class="bg-[url(/assets/images/service/banner-bg.png)] bg-repeat bg-[length:200px] relative">
 
@@ -272,6 +274,6 @@ onMounted(() => {
         </div>
     </section>
 
-
+    <Footer />
 </template>
 
