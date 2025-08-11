@@ -83,7 +83,6 @@ import { onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-
 onMounted(() => {
     AOS.init({
         duration: 800,   // 動畫持續時間
@@ -99,14 +98,14 @@ onMounted(() => {
         <div class="container-1296 max-w-[800px]">
             <div class="hidden min-[1024px]:contents">
                 
-                <img src="/assets/images/service/banner-person.svg" alt="bg-img" class="absolute -bottom-2 right-0">
-                <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0">
-                <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0">
+                <img src="/assets/images/service/banner-person.svg" alt="bg-img" class="absolute -bottom-2 right-0" data-aos="flip-up">
+                <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0" data-aos="zoom-out-left">
+                <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0" data-aos="zoom-out-right">
             </div>
     
     
             <div class="space-y-6 md:space-y-12 py-12 md:py-20 px-3 md:px-0 text-center">
-                <h1 class="cusText-5xl">服務方案</h1>
+                <h1 class="cusText-5xl" data-aos="zoom-in">服務方案</h1>
                 <p class="cusText-b-lg text-natural-50 relative z-10">我們最全面的服務方案，為您提供從評估、規劃到實踐的完整支持。不再擔心轉型過程中的各種挑戰，我們的專家團隊將全程陪伴，確保您順利實現職業自由。</p>
     
             </div>
@@ -126,7 +125,7 @@ onMounted(() => {
     
                 <div v-for="(plan, index) in plans" :key="index" class="rounded-card shadow-boxShadow p-6 md:p-12 relative my-4" :class="plan.hot ? 'border-2 border-secondary-50 pt-12' : 'border-none'" >
                     <!-- HOT 標籤 -->
-                    <div v-if="plan.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold">
+                    <div v-if="plan.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         HOT
                     </div>
                     <div class="md:grid md:grid-cols-4 gap-6 group">
@@ -186,7 +185,7 @@ onMounted(() => {
     <section class="bg-natural-95">
         <div class="container-1296">
             <section class="py-12 p-3 md:py-20 md:px-0">
-                <div class="flex flex-col items-center gap-4">
+                <div class="flex flex-col items-center gap-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <h3 class="cusText-4xl">
                         <img src="../assets/images/service/conversation.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1">
                         基礎諮詢服務</h3>
@@ -196,7 +195,7 @@ onMounted(() => {
                 <div class="mt-6 md:mt-12 flex flex-col gap-4 md:gap-6 md:grid md:grid-cols-2 min-[1024px]:grid-cols-3">
                     <div v-for="(consult, index) in consults" :key="index" class="rounded-card shadow-boxShadow relative bg-natural-light py-6 px-4 md:px-6 min-w-spac-300 md:col-span-1" :class="consult.hot ? 'border-2 border-secondary-50' : 'border-none'" >
                         <!-- HOT 標籤 -->
-                        <div v-if="consult.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold">
+                        <div v-if="consult.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             HOT
                         </div>
                         <div class="flex flex-col items-center text-center gap-4 md:gap-6 group">
@@ -234,7 +233,7 @@ onMounted(() => {
         <div class="container-1296">
             <section class="py-12 p-3 md:py-20 md:px-0 sapce-y-6 md:space-y-12">
                 <div class="flex flex-col items-center gap-4">
-                    <h3 class="cusText-4xl">
+                    <h3 class="cusText-4xl" data-aos="flip-down">
                         <img src="../assets/images/service/love.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1">
                         持續支持方案
                     </h3>

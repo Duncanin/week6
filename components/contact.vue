@@ -28,6 +28,17 @@ const infoSource = ref ([
     '其他（請填寫下題）',
 ])
 
+import { onMounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+onMounted(() => {
+    AOS.init({
+        duration: 800,   // 動畫持續時間
+        once: false,     // 每次滾動進入都觸發，而不是只觸發一次
+    })
+})
+
 </script>
 
 <template>
@@ -44,7 +55,7 @@ const infoSource = ref ([
         
                 <form action="" class="bg-natural-light rounded-card p-6 md:p-12 shadow-boxShadow space-y-6 md:space-y-12 relative">
 
-                    <img src="../assets/images/contact/person-img.svg" alt="bg-img" class="absolute right-10 -top-[140px] hidden min-[1024px]:block">
+                    <img src="../assets/images/contact/person-img.svg" alt="bg-img" class="absolute right-10 -top-[140px] hidden min-[1024px]:block" data-aos="fade-down-left">
 
                     <!-- basic Info -->
                     <section class="md:flex border-b border-natural-85">

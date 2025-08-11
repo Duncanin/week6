@@ -1,5 +1,6 @@
 import './assets/scss/all.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'aos/dist/aos.css'
 
 import { createApp } from 'vue'
 import Header from './layout/header.vue'
@@ -8,13 +9,13 @@ import Index from './components/index.vue'
 import Service from './components/service.vue'
 import About from './components/about.vue'
 import Contact from './components/contact.vue'
+import AOS from 'aos'
 
 // TWE
 import { Tooltip, Tab, Dropdown, Modal, Collapse, Ripple, initTWE } from "tw-elements";
 
 // 確保 DOM 載入完成後才初始化
 document.addEventListener("DOMContentLoaded", () => {
-    initTWE({ Tooltip, Tab, Dropdown, Modal, Collapse, Ripple });
 
     // 自動掛載所有 data-page 的 Vue 元件
     const mountPoints = document.querySelectorAll('[data-page]')
@@ -47,5 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (component) {
         createApp(component).mount(el)
         }
-    })
+    });
+    initTWE({ Tooltip, Tab, Dropdown, Modal, Collapse, Ripple });
 })

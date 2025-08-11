@@ -1,8 +1,8 @@
 <script setup>
     import { Modal } from 'tw-elements';
     const openLoginModal = () => {
-    const modalEl = document.getElementById('exampleModalFirst');
-    const modal = new Modal(modalEl);
+    const modalElement = document.getElementById('exampleModalFirst');
+    const modal = new Modal(modalElement);
         modal.show();
     };
     
@@ -66,7 +66,7 @@
             // token
             signInRes.value =res.data.token;
             // token named: customToken
-            document.cookie = `customToken=${res.data.token};path/`
+            document.cookie = `customToken=${res.data.token};path=/`
 
         } catch (error) {
             console.log('錯誤！！');
