@@ -118,7 +118,7 @@ onMounted(() => {
             <section class="py-12 p-3 md:py-20 md:px-0">
                 <div class="flex flex-col items-center gap-4">
                     <h3 class="cusText-4xl">
-                        <img src="../assets/images/service/goal.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1">
+                        <img src="../assets/images/service/goal.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1" data-aos="fade-up-right">
                         職涯轉型全程計畫</h3>
                     <p class="cusText-b-lg text-natural-50">從企業到自由，無縫轉型之旅</p>
                 </div>
@@ -185,7 +185,7 @@ onMounted(() => {
     <section class="bg-natural-95">
         <div class="container-1296">
             <section class="py-12 p-3 md:py-20 md:px-0">
-                <div class="flex flex-col items-center gap-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="flex flex-col items-center gap-4" data-aos="fade-up-left">
                     <h3 class="cusText-4xl">
                         <img src="../assets/images/service/conversation.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1">
                         基礎諮詢服務</h3>
