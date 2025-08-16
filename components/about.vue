@@ -74,14 +74,14 @@ onMounted(() => {
 
 <template>
     <Header />
-    <section class="bg-[url(/assets/images/service/banner-bg.png)] bg-repeat bg-[length:200px] relative">
+    <section class="bg-[url(/assets/images/service/banner-bg.png)] bg-repeat bg-[length:200px] relative overflow-hidden">
 
         <div class="container-1296 max-w-[800px]">
             <div class="hidden min-[1024px]:contents">
                 
                 <img src="/assets/images/service/banner-person.svg" alt="bg-img" class="absolute -bottom-2 right-0" data-aos="zoom-out-up">
-                <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0">
-                <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0">
+                <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0" data-aos="fade-down-left">
+                <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0" data-aos="fade-up-right">
             </div>
     
     
@@ -128,7 +128,7 @@ onMounted(() => {
                 </Swiper>
                 
                 <section class="bg-primary-60 rounded-card">
-                    <div class="max-w-[800px] mx-auto text-natural-light text-center p-6 pt-4 md:px-0 md:pt-6 md:pb-12">
+                    <div class="max-w-[800px] mx-auto text-natural-light text-center p-6 pt-4 md:px-0 md:pt-6 md:pb-12 overflow-hidden">
                         <div class="flex items-center justify-center flex-col relative mb-6 md:mb-12">
                             <p class="cusText-xl text-primary-main border-2 border-primary-main py-3 px-5 rounded-radius-12 inline-block relative mb-8 md:mb-10 bg-natural-light" data-aos="flip-right">團隊承諾
                                 <span class="absolute left-1/2 top-full -translate-x-1/2 w-0 h-0 border-x-[15px] border-x-transparent border-t-[15px] border-t-primary-main"></span>

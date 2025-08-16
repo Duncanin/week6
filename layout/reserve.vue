@@ -3,7 +3,7 @@
 </script>
 <template>
     <section>
-        <div class="container-1296">
+        <div class="container-1296 overflow-hidden">
             <div class="bg-primary-60 text-natural-light py-4 px-6 md:py-6 md:px-12 rounded-card mx-3 my-10">
     
                 <div class="mb-6" data-aos="zoom-out">
@@ -17,14 +17,14 @@
                 <hr class="mb-4 md:mb-6 border-dashed">
     
                 <div class="flex flex-col gap-4 md:flex-row md:gap-6">
-                    <div class="flex gap-2 items-center">
+                    <a class="flex gap-2 items-center" href="tel:+886-0800123123">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="none"><path fill="currentColor" d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
                         0800-123-123
-                    </div>
-                    <div class="flex gap-2 items-center">
+                    </a>
+                    <a class="flex gap-2 items-center" href="mailto:Sample@mail.com">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
                         Sample@mail.com
-                    </div>
+                    </a>
                     <button type="button" class="btn-filled font-normal me-auto md:ms-auto mt-2 md:mt-0 md:mr-0" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         預約免費職涯探索
                         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>

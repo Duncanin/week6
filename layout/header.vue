@@ -42,6 +42,7 @@
 
             // show uid
             signupRes.value =res.data.uid
+            window.location.href = 'index.html';
         } catch (error) {
             console.log('錯誤！！');
             
@@ -67,6 +68,7 @@
             signInRes.value =res.data.token;
             // token named: customToken
             document.cookie = `customToken=${res.data.token};path=/`
+            window.location.href = 'index.html';
 
         } catch (error) {
             console.log('錯誤！！');

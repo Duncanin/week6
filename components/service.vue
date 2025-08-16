@@ -95,12 +95,12 @@ onMounted(() => {
     
     <section class="bg-[url(/assets/images/service/banner-bg.png)] bg-repeat bg-[length:200px] relative">
 
-        <div class="container-1296 max-w-[800px]">
+        <div class="container-1296 max-w-[800px] overflow-hidden">
             <div class="hidden min-[1024px]:contents">
                 
                 <img src="/assets/images/service/banner-person.svg" alt="bg-img" class="absolute -bottom-2 right-0" data-aos="flip-up">
-                <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0" data-aos="zoom-out-left">
-                <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0" data-aos="zoom-out-right">
+                <img src="/assets/images/service/Frame.svg" alt="bg-img" class="absolute right-0 top-0" data-aos="fade-down-left">
+                <img src="/assets/images/service/Frame2.svg" alt="bg-img" class="absolute left-0 bottom-0" data-aos="fade-up-right">
             </div>
     
     
@@ -114,7 +114,7 @@ onMounted(() => {
     </section>
 
     <section>
-        <div class="container-1296">
+        <div class="container-1296 overflow-hidden">
             <section class="py-12 p-3 md:py-20 md:px-0">
                 <div class="flex flex-col items-center gap-4">
                     <h3 class="cusText-4xl">
@@ -125,7 +125,7 @@ onMounted(() => {
     
                 <div v-for="(plan, index) in plans" :key="index" class="rounded-card shadow-boxShadow p-6 md:p-12 relative my-4" :class="plan.hot ? 'border-2 border-secondary-50 pt-12' : 'border-none'" >
                     <!-- HOT 標籤 -->
-                    <div v-if="plan.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <div v-if="plan.hot" class="absolute top-0 left-0 bg-secondary-50 text-natural-main px-4 py-2 rounded-tAD rounded-tr-none rounded-bl-none cusText-b-sm font-bold" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         HOT
                     </div>
                     <div class="md:grid md:grid-cols-4 gap-6 group">
@@ -183,7 +183,7 @@ onMounted(() => {
     </section>
 
     <section class="bg-natural-95">
-        <div class="container-1296">
+        <div class="container-1296 overflow-hidden">
             <section class="py-12 p-3 md:py-20 md:px-0">
                 <div class="flex flex-col items-center gap-4" data-aos="fade-up-left">
                     <h3 class="cusText-4xl">
@@ -263,8 +263,8 @@ onMounted(() => {
                     </button>
 
                     <div>
-                        <img src="../assets/images/service/subscribe-1.svg" alt="bg-1" class="absolute -bottom-[2px] left-6" data-aos="fade-right">
-                        <img src="../assets/images/service/subscribe-2.svg" alt="bg-2" class="absolute -bottom-[2px] right-6" data-aos="fade-left">
+                        <img src="../assets/images/service/subscribe-1.svg" alt="bg-1" class="absolute -bottom-[2px] left-6 hidden md:block" data-aos="fade-right">
+                        <img src="../assets/images/service/subscribe-2.svg" alt="bg-2" class="absolute -bottom-[2px] right-6 hidden md:block" data-aos="fade-left">
                     </div>
 
                 </section>
