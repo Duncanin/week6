@@ -231,7 +231,7 @@ onMounted(() => {
 
     <section class="bg-[linear-gradient(to_bottom,_theme(colors.natural.95)_200px,_theme(colors.natural.light)_200px)]">
         <div class="container-1296">
-            <section class="py-12 p-3 md:py-20 md:px-0 sapce-y-6 md:space-y-12">
+            <section class="py-12 p-3 md:py-20 md:px-0 sapce-y-6 md:space-y-12 overflow-hidden">
                 <div class="flex flex-col items-center gap-4">
                     <h3 class="cusText-4xl" data-aos="flip-down">
                         <img src="../assets/images/service/love.svg" alt="iconImg" class="h-14 w-14 mx-auto mb-1">
